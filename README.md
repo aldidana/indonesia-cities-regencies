@@ -11,7 +11,8 @@ const indonesia = require('indonesia-cities-regencies')
 
 indonesia.get('jak') // default limit is 10
 indonesia.get('jak', 5)
-indonesia.getAll() // default limit is 10
+indonesia.getAll() // return all
+indonesia.getAll(5)
 ```
 
 ## Credits
