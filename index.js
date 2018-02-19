@@ -1,37 +1,42 @@
-var list = require('./list.json');
-var Fuse = require('fuse.js');
+const list = require('./list.json')
+const Fuse = require('fuse.js')
+const e = {
+    nan: (field) => new Error(`NaN - \`${field}\` must be a number`)
+}
 
-var options = {
-  keys: [{
-  	name: 'name',
-  	weight: 0.7
-  }, {
-  	name: 'province',
-  	weight: 0.3
-  }]
-};
+const fuzzy = new Fuse(list, {
+    shouldSort: true,
+    tokenize: true,
+    maxPatternLength: 32,
+    minMatchCharLength: 2,
+    keys: [{
+        name: 'name',
+        weight: 0.9
+    }, {
+        name: 'province',
+        weight: 0.01
+    }]
+})
 
-var fuse = new Fuse(list, options);
+/**
+ * get filtered list with specific query, implemented from [fuse js]{@link http://fusejs.io}
+ * @param {String} q query to search
+ * @param {Number} limit Limit in number, default to 10, negative
+ * @returns {Array<Object>} List
+ */
+const get = (q = '', limit = 10) => {
 
-function get (q, limit) {
-	if (!limit) limit = 10;
+    if (typeof limit !== 'number') {
+        throw e.nan('limit')
+    }
 
-	if (typeof limit !== 'number') throw new Error('Limit must be number');
+    // use fuzzy if there is a `q`, all if q is falsy
+    const result = q ? fuzzy.search(q) : list
 
-	var result = fuse.search(q).splice(0, Number(limit));
-	return result;
-};
-
-function getAll (limit) {;
-	if (!limit) return list;
-
-	if (typeof limit !== 'number') throw new Error('Limit must be number');
-
-	var result = list.splice(0, Number(limit));
-	return result;
-};
+    // splice if limit is positive, all if limit is zero & negative
+    return limit > 0 ? result.splice(0, Number(limit)) : result
+}
 
 module.exports = {
-	get: get,
-	getAll: getAll
-};
+    get
+}
