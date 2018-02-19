@@ -1,0 +1,14 @@
+{
+  "name": "indonesia-cities-regencies",
+  "version": "1.0.0",
+  "description": "List of regencies and cities of Indonesia",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aldi Priya Perdana",
+  "license": "ISC",
+  "dependencies": {
+    "fuse.js": "^3.2.0"
+  }
+}
