@@ -1,6 +1,6 @@
 {
   "name": "indonesia-cities-regencies",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "List of all cities/regencies in Indonesia",
   "main": "index.js",
   "scripts": {
