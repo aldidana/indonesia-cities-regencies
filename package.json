@@ -1,17 +1,23 @@
 {
   "name": "indonesia-cities-regencies",
   "version": "1.0.1",
-  "description": "List of regencies and cities of Indonesia",
+  "description": "List of all cities/regencies in Indonesia",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "list",
+    "indonesia",
+    "cities",
+    "regencies"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/aldidana/indonesia-cities-regencies.git"
   },
   "author": "Aldi Priya Perdana",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "fuse.js": "^3.2.0"
   }
