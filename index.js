@@ -37,6 +37,13 @@ const get = (q = '', limit = 10) => {
     return limit > 0 ? result.splice(0, Number(limit)) : result
 }
 
+/**
+ * getAll return all cities/regencies
+ * @returns {Array<Object>} List
+ */
+const getAll = () => list
+
 module.exports = {
-    get
+    get,
+    getAll
 }
