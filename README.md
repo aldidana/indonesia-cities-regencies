@@ -19,26 +19,26 @@ indonesia.get('jak', 5)
 ```
 
 ```json
-[ { name: 'Kota Administrasi Jakarta Pusat',
-    island: 'Jawa',
-    province: 'Jakarta',
-    capital: 'Menteng' },
-  { name: 'Kabupaten Administrasi Kepulauan Seribu',
-    island: 'Jawa',
-    province: 'Jakarta',
-    capital: 'Pulau Pramuka' },
-  { name: 'Kota Administrasi Jakarta Barat',
-    island: 'Jawa',
-    province: 'Jakarta',
-    capital: '-' },
-  { name: 'Kota Administrasi Jakarta Selatan',
-    island: 'Jawa',
-    province: 'Jakarta',
-    capital: '-' },
-  { name: 'Kota Administrasi Jakarta Timur',
-    island: 'Jawa',
-    province: 'Jakarta',
-    capital: 'Jatinegara' } ]
+[ { "name": "Kota Administrasi Jakarta Pusat",
+    "island": "Jawa",
+    "province": "Jakarta",
+    "capital": "Menteng" },
+  { "name": "Kabupaten Administrasi Kepulauan Seribu",
+    "island": "Jawa",
+    "province": "Jakarta",
+    "capital": "Pulau Pramuka" },
+  { "name": "Kota Administrasi Jakarta Barat",
+    "island": "Jawa",
+    "province": "Jakarta",
+    "capital": "-" },
+  { "name": "Kota Administrasi Jakarta Selatan",
+    "island": "Jawa",
+    "province": "Jakarta",
+    "capital": "-" },
+  { "name": "Kota Administrasi Jakarta Timur",
+    "island": "Jawa",
+    "province": "Jakarta",
+    "capital": "Jatinegara" } ]
 ```
 
 ## Credits
