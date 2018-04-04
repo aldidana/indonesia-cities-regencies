@@ -34,7 +34,7 @@ const get = (q = '', limit = 10) => {
     const result = q ? fuzzy.search(q) : list
 
     // splice if limit is positive, all if limit is zero & negative
-    return limit > 0 ? result.splice(0, Number(limit)) : result
+    return limit > 0 ? [...result].splice(0, Number(limit)) : result
 }
 
 /**
