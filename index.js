@@ -1,4 +1,5 @@
-const list = require('./list.json')
+let list = require('./list.json')
+const _ = require('lodash')
 const Fuse = require('fuse.js')
 const e = {
     nan: (field) => new Error(`NaN - \`${field}\` must be a number`)
@@ -16,6 +17,10 @@ const fuzzy = new Fuse(list, {
         name: 'province',
         weight: 0.01
     }]
+})
+
+list = _.filter(list, (data) => {
+    return _.startsWith(data.name.toLowerCase(), 'kota', [0, 3])
 })
 
 /**
