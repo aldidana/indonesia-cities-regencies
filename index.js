@@ -5,6 +5,10 @@ const e = {
     nan: (field) => new Error(`NaN - \`${field}\` must be a number`)
 }
 
+list = _.filter(list, (data) => {
+    return _.startsWith(data.name.toLowerCase(), 'kota', [0, 3])
+})
+
 const fuzzy = new Fuse(list, {
     shouldSort: true,
     tokenize: true,
@@ -17,10 +21,6 @@ const fuzzy = new Fuse(list, {
         name: 'province',
         weight: 0.01
     }]
-})
-
-list = _.filter(list, (data) => {
-    return _.startsWith(data.name.toLowerCase(), 'kota', [0, 3])
 })
 
 /**
