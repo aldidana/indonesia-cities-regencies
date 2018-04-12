@@ -19,6 +19,7 @@
   "author": "Aldi Priya Perdana",
   "license": "MIT",
   "dependencies": {
-    "fuse.js": "^3.2.0"
+    "fuse.js": "^3.2.0",
+    "lodash": "^4.17.5"
   }
 }
