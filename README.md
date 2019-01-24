@@ -46,6 +46,10 @@ indonesia.get('jak', 5)
 - [Wikipedia](https://id.wikipedia.org/wiki/Daftar_kabupaten_dan_kota_di_Indonesia)
 - [Gunawan Wijaya](https://github.com/gunawanwijaya) for scraping the data
 
+## Used in production by
+
+- [Pomona](https://web.pomona.id/)
+
 ## License
 
 MIT @Aldi Priya Perdana
